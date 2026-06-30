@@ -20,7 +20,6 @@ pre-commit:
       priority: 4
       glob:
         - '**/*.{astro,elm,hbs,svelte,vue}'
-        - '**/*.{css,less,sass,scss}'
         - '**/*.{graphql,gql}'
         - '**/*.{html,htm}'
         - '**/*.{js,cjs,mjs,jsx}'

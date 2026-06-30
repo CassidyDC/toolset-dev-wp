@@ -1,4 +1,7 @@
 {
+	"[css]": {
+		"editor.formatOnSave": false
+	},
 	"[markdown]": {
 		"editor.insertSpaces": true
 	},
