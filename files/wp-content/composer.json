@@ -1,5 +1,5 @@
 {
-	"name": "cassidydc/cassidydc-toolset",
+	"name": "cassidydc/wp-dev-toolset",
 	"description": "CassidyDC default PHP code formatting, linting, and static analysis development toolset",
 	"version": "1.0.0",
 	"keywords": [
@@ -9,7 +9,7 @@
 		"wordpress",
 		"wp"
 	],
-	"homepage": "https://github.com/CassidyDC/cassidydc-toolset/blob/main/README.md",
+	"homepage": "https://github.com/CassidyDC/wp-dev-toolset/blob/main/README.md",
 	"license": "MIT",
 	"authors": [
 		{
