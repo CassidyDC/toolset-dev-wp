@@ -1,38 +1,17 @@
-# CassidyDC Development Toolset
+# WP Dev Toolset
 
-CassidyDC default code formatting, linting, and build toolset for WordPress development.
+CassidyDC default code formatting, linting, and build toolset for WordPress Block Theme and Plugin development.
 
-## Overview
+## Quick Start Guide
 
-There are 3 directories included for various setups:
+1. Add the files in this repo's `files/wp-content` directory to your local development `wp-content` directory.
+2. Add the files in this repo's `files/theme` and/or `files/plugin` directory to your specific theme or plugin directories you are developing.
+3. Add your theme and/or plugin directories to your `wp-content/package.json` file in the `workspaces` object, and add the build and start commands for each theme and/or plugin to the `scripts` object in the same file using the same format that is included there.
+4. Update the following config files to replace or add your theme/plugin directories to the linting and formatting rules:
 
-### Root
+    - `.gitignore` (under mu-plugins, plugins, and/or themes)
+    - `composer.json` (in `scripts > syntax > themes/cassidydc-block-theme`)
+    - `phpcs.xml` (under "Directories and files to check")
+    - `phpstan.neon` (under "paths")
 
-This directory contains the development config files that should be use in your project's root workspace. This can be the local server root directory, the theme directory, or the plugin directory, depending on what you set as your workspace root.
-
-If you are using a plugin or theme directory as your root workspace, the plugin or theme `package.json` **devDependencies** and **scripts** should be added to the root `package.json` file you add in your workspace.
-
-> [!NOTE]
-> You need to update the path to your theme and/or plugins to replace `wp-content/theme/your-theme` in the following files:
->
-> 1. `composer.json`
-> 2. `phpcs.xml`
-> 3. `phpstan.neon`
-
-### Plugin
-
-When you are using your local server as your workspace root and have a plugin nested inside that workspace, you should add these plugin config files in your nested plugin directory.
-
-### Theme
-
-Same as for 'Plugin' above. The difference is the theme `package.json` and `webpack.config.js` contain an additional package called `webpack-remove-empty-scripts` that removes empty JS files created by the WordPress build script when used for themes.
-
-## Optional Stylelint Plugins
-
-| Plugin                                              | Purpose                                                                                                                                                       |
-| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `stylelint-declaration-block-no-ignored-properties` | Warns when using properties that have no effect when combined with other properties (note: not always correct, so double check before committing the change). |
-| `stylelint-high-performance-animation`              | Warns when using performance-degrading CSS animation                                                                                                          |
-| `stylelint-no-indistinguishable-color`              | Enforce use of colors that are not too close to each other (with threshold setting).                                                                          |
-| `stylelint-plugin-logical-css`                      | Enforce the use of logical CSS properties, values, and units.                                                                                                 |
-| `stylelint-use-nesting`                             | Enforces CSS nesting when possible.                                                                                                                           |
+5. OPTIONAL: Install the recommended VSCode extensions listed in this repo's `files/wp-content/.vscode/extensions.json` file. Not all extensions are required, but I recommend at least installing the formatting and linting extensions if you want VSCode show linting errors and format your files without needing to go through the command line.
