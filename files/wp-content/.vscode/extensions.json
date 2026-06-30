@@ -6,7 +6,6 @@
 		"dbaeumer.vscode-eslint", // ESLint for JS/TS linting
 		"esbenp.prettier-vscode", // Prettier for code formatting
 		"fabiospampinato.vscode-browser-refresh", // Browser refresh in VSCode with hotkey
-		"GitHub.copilot-chat", // AI pair programming chat
 		"jacobcassidy.cassidy-dark", // VSCode theme
 		"jacobcassidy.css-nesting-syntax-highlighting", // CSS nesting syntax highlighting
 		"naumovs.color-highlight", // Highlight colors in code
