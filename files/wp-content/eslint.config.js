@@ -5,13 +5,12 @@
  * @author CassidyDC <info@cassidydc.com>
  * @see https://eslint.org/docs/latest/use/configure/configuration-files
  * @type {import("eslint").Linter.Config[]}
- * @version 1.0.0
+ * @version 1.1.0
  */
 
 import globals from 'globals';
 import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
-import wordpress from '@cassidydc/eslint-plugin-wordpress';
 import { defineConfig, globalIgnores } from 'eslint/config';
 import { fileURLToPath } from 'node:url';
 import { importX } from 'eslint-plugin-import-x';
@@ -27,16 +26,17 @@ export default defineConfig( [
 			'import-x': importX,
 			js,
 			tseslint,
-			wordpress,
 		},
 		extends: [
 			'import-x/recommended',
 			'js/recommended',
 			'tseslint/recommended',
-			'wordpress/recommended',
 		],
 		files: [ '**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}' ],
 		languageOptions: {
+			parserOptions: {
+				tsconfigRootDir: fileURLToPath( new URL( '.', import.meta.url ) ),
+			},
 			globals: {
 				...globals.browser,
 			},
@@ -48,7 +48,6 @@ export default defineConfig( [
 			'@typescript-eslint/no-unused-vars': 'warn',
 			'no-console': 'warn',
 			'no-unused-vars': 'warn',
-			'prettier/prettier': [ 'warn', { printWidth: 120 } ],
 			yoda: [ 'warn', 'never' ],
 		},
 		settings: {
