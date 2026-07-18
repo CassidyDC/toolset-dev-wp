@@ -1,6 +1,6 @@
 {
 	"name": "@cassidydc/wp-theme-build",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "CassidyDC build script for WordPress Block themes",
 	"keywords": [
 		"build",
@@ -13,18 +13,18 @@
 		"email": "info@cassidydc.com",
 		"url": "https://cassidydc.com"
 	},
-	"homepage": "https://github.com/CassidyDC/wp-dev-toolset/blob/main/README.md",
+	"homepage": "https://github.com/CassidyDC/toolset-dev-wp/blob/main/README.md",
 	"license": "MIT",
 	"type": "module",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/CassidyDC/wp-dev-toolset"
+		"url": "https://github.com/CassidyDC/toolset-dev-wp"
 	},
 	"bugs": {
-		"url": "https://github.com/CassidyDC/wp-dev-toolset/issues"
+		"url": "https://github.com/CassidyDC/toolset-dev-wp/issues"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^32.5.0",
+		"@wordpress/scripts": "^33.0.0",
 		"webpack-remove-empty-scripts": "^1.1.1"
 	},
 	"scripts": {

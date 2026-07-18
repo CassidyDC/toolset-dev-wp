@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
-<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CassidyDC PHPCS" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/squizlabs/PHP_CodeSniffer/master/phpcs.xsd">
-  <description>CassidyDC coding standards for WordPress projects.</description>
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="CassidyDC PHPCS"
+  xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/squizlabs/PHP_CodeSniffer/master/phpcs.xsd">
+  <description>CassidyDC's coding standards for WordPress projects.</description>
 
   <!-- Directories and files to check -->
   <file>themes/cassidydc-block-theme</file>
